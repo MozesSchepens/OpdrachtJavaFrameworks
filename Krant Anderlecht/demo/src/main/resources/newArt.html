@@ -1,4 +1,6 @@
 <th:block th:replace="layout :: content">
+    <link rel="stylesheet" href="style.css">
+
     <h1>New Article</h1>
     <form th:action="@{/new}" th:object="${article}" method="post">
         <div class="form-group">
