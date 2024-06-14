@@ -1,0 +1,20 @@
+<th:block th:replace="layout :: content">
+    <h1>Latest Articles</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Reporter</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="article : ${articles}">
+                <td th:text="${article.title}"></td>
+                <td th:text="${article.reporterName}"></td>
+                <td><a th:href="@{'/details/' + ${article.id}}">Details</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-primary" th:href="@{/new}">New Article</a>
+</th:block>

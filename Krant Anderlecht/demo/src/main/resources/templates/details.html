@@ -1,0 +1,7 @@
+<th:block th:replace="layout :: content">
+    <h1 th:text="${article.title}"></h1>
+    <p><strong>Category:</strong> <span th:text="${article.category}"></span></p>
+    <p><strong>Reporter:</strong> <span th:text="${article.reporterName}"></span> (<span
+            th:text="${article.reporterEmail}"></span>)</p>
+    <p th:text="${article.content}"></p>
+</th:block>
